@@ -1,0 +1,240 @@
+body{
+    background-color: black;
+    margin: 0%;
+    font-family: Sans-serif;
+}
+
+
+/* container  */
+.container {
+display: flex;
+justify-content: center;
+gap: 40px;
+margin-top: 100px;   
+margin-bottom: 140px; 
+
+  }
+
+
+.container>div {
+    color: white;
+    background-color: #212529;
+    padding: 20px;
+    margin: 0%;
+    text-align: center;
+    border-radius: 20px;
+    width: 250px;
+    min-height: 230px;
+}
+
+h1{
+    margin: 0%;
+    color: #d6d9db;
+}
+
+.container>.essay{
+    width: 700px;
+    text-align: left;
+    
+}
+
+.container>.cr_post{
+    width: 700px;
+}
+
+.cr_post>p{
+    font-size: 40px;
+    padding-left: 20px;
+    font-family: serif;
+}
+
+input[type=text],textarea{
+    
+    width: 100%; 
+    max-width: 650px;
+    background-color: #212529;
+    border: 1px solid white;
+    min-height: 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    padding-left: 5px;
+  }
+
+::placeholder{
+    color: white;
+ }
+ 
+
+
+/* On mouse-over */
+#title {
+    text-decoration: underline;
+    text-align: left;
+    font-size: 26px;
+    padding: 0%;
+    white-space: normal;
+    }
+
+
+.btn {
+    border: none;
+    background-color: inherit;
+    color: #d6d9db;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #dee2e6bf;
+}
+
+p{
+font-size: 18px;
+color: #d6d9db;
+text-align: left;
+line-height: 30px;
+}
+
+.Essay_container>p{
+    /* deal with overflow text  */
+     overflow: hidden;
+    /*The problematic part is below*/
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+/* CSS */
+.button-21 {
+   background-color: white;
+   border: none;
+   color: black;
+   border-radius: 100px;
+   padding: 12px 72px;
+   text-align: center;
+   font-size: 18px;
+   cursor: pointer;
+   
+}
+
+.button-21:hover {
+    background-color: #d6d9db;
+}
+
+#w_post:hover {
+    background-color: white;
+    color: black;
+}
+
+
+#w_post{
+    visibility: hidden;
+}
+
+
+.essay>.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+.essay > .button-21{
+font-size: 13px;
+padding: 4px 13px;
+margin-top: 50px;
+}
+
+
+
+.nav_Bar{
+min-height: 50px;
+background-color: #212529;
+border-top: 0.5px solid #495057;
+border-bottom: 1px solid #495057;
+width: 100%;
+}
+
+.header{
+position: fixed;
+top: 0%;
+display: flex;
+justify-content: space-between;
+max-height: 0;
+overflow: hidden;
+}
+
+.transformed-state {
+    max-height: 300px;
+    transition: max-height 0.5s ease-in  ;
+}
+
+.transformed-state-2 {
+    margin-top: 230px;
+    transition: margin-top 0.3s ease-in;
+}
+
+
+/*for c_post file  */
+.create_post{
+    margin-top: 50px;
+}
+
+
+/*for footer.ejs file  */
+footer{
+    position: relative;
+    bottom: 0%;
+}
+
+footer>p {
+    padding-left: 20px;
+}
+
+.threeL{
+    display: none;
+}
+
+
+
+
+@media (max-width: 650px) {
+.button-21 {
+    padding: 12px 30px;    
+
+}
+}
+
+@media (max-width: 553px) {
+.creat_p,.nav_Bar>.f_one>.hid{
+    display: none ;
+}
+.threeL{
+    /* must toggle the display because it was hidden */
+    display: inline;
+    height: 40px;
+    width: 50px;
+}
+
+.f_one>input{
+display: block;
+}
+
+}
+
+
+@media(max-width : 755px){
+.cr_post>p{
+    padding-left: 0%;
+}
+}
+
+
+
+
+
+
+

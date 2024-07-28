@@ -1,0 +1,51 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+  <!-- essay _ div  -->
+  <div class="essay">
+    <form action="/essay" method="post" class="form">
+      <% for(let i = 0; i < title.length; i++) { %>
+      <p><%= date[i] %></p>
+      <div class="Essay_container">
+        <input
+          type="submit"
+          name="title"
+          class="btn"
+          id="title"
+          value="<%= title[i] %>"
+        />
+        <br />
+        <p><%= essay[i] %></p>
+      </div>
+      <hr color="#495057" />
+      <br />
+      <% } %>
+    </form>
+  </div>
+
+  <!-- creat_p DIV -->
+  <div class="creat_p">
+    <form action="/creat" method="POST">
+      <input type="submit" value="WRITE POST" class="button-21" id="w_btn" />
+    </form>
+    <br />
+
+    <!--
+    
+     check the last element in the array and if correct display the paragrahp 
+     just check the last item because it is enouph  
+
+  -->
+    <p>RECENT POST:</p>
+
+    <% for (let i = 0; i < date.length; i++) { const date_now = new Date();
+    const diffTime = Math.abs(date_now - new Date(date[i])); if
+    (Math.floor(diffTime / (60 * 1000)) <= 59) { %>
+    <p><%= title[i] %></p>
+    <hr color="#495057" />
+    <% } } %>
+  </div>
+</div>
+
+
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+  <div class="cr_post">
+    <p>Edit Post</p>
+    <form action="/ed" method="post">
+      <input type="text"  name="title" required value="<%=title[idxOf]%>"/><br/>
+      <br />
+      <textarea  cols="50" rows="20" name="essay" required="required" id="essay"><%=essay[idxOf]%></textarea>
+      <br />
+      <br />
+      <input type="submit" value="Edit Post" class="button-21" />
+    </form>
+
+    <!--Editing : 
+when submit at the middleware the data will be edited  -->
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

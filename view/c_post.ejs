@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+  <div class="cr_post">
+    <p>Create Post</p>
+    <form action="/submit" method="POST" class="">
+      <input type="text" name="title" required placeholder="Title" /><br />
+      <br />
+      <textarea
+        name="essay"
+        cols="50"
+        rows="20"
+        required
+        placeholder="Essay"
+      ></textarea>
+      <br />
+      <br />
+      <input type="submit" value="Create Post" class="button-21" />
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

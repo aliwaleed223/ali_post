@@ -1,0 +1,43 @@
+<%- include('partials/header.ejs') %>
+
+<head>
+  <title>Send Path to Node.js</title>
+  <script>
+    function sendFilePath(button) {
+      var filePath = "/essay";
+
+      // Create a form dynamically
+      var form = document.createElement("form");
+      form.method = "POST";
+      form.action = "/edit";
+      // to delete we want to change the filePath and action
+      if (button.innerHTML == "Delete") {
+        filePath = "/delete";
+        form.action = "/submit";
+      }
+      // Create an input element to hold the filePath
+      var input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "filePath";
+      input.value = filePath;
+
+      // Append the input to the form
+      form.appendChild(input);
+
+      // Append the form to the body and submit it
+      document.body.appendChild(form);
+      form.submit();
+    }
+  </script>
+</head>
+<div class="container">
+  <div class="essay ">
+    <h1><%= title [idxOf] %></h1>
+     <hr color="#495057" />
+    <p><%= essay [idxOf] %></p>
+
+    <button onclick="sendFilePath(this)" class="button-21">Edit</button>
+    <button onclick="sendFilePath(this)" class="button-21 delete">Delete</button>
+  </div>
+</div>
+<%- include('partials/footer.ejs') %>
